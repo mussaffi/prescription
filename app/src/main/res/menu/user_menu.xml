@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/logout"
+        android:orderInCategory="100"
+        android:title="LogOut"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/prescription"
+        android:orderInCategory="100"
+        android:title="prescription"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/chat"
+        android:orderInCategory="100"
+        android:title="chat"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/home"
+        android:orderInCategory="100"
+        android:title="home"
+        app:showAsAction="never"/>
+</menu>

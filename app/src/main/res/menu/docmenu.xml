@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/logout"
+        android:orderInCategory="100"
+        android:title="התנתקות"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/Meds"
+        android:orderInCategory="100"
+        android:title="תרופןת"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/userList"
+        android:orderInCategory="100"
+        android:title="רשימת משתמשים"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/AddUser"
+        android:orderInCategory="100"
+        android:title="הוספת משתמש"
+        app:showAsAction="never"/>
+
+
+</menu>

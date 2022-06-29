@@ -1,0 +1,23 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_remove_circle_outline_24"
+        android:title="Log Out"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/userList"
+        android:icon="@drawable/user_list"
+        android:title="My Patients"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/AddUser"
+        android:icon="@drawable/ic_person_add"
+        android:title="add patients"
+        app:showAsAction="always"/>
+</menu>

@@ -1,0 +1,27 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_remove_circle_outline_24"
+        android:title="Log Out"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/prescription"
+        android:icon="@drawable/ic_stock"
+        android:title="My meds"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/ic_baseline_chat_bubble_24"
+        android:title="chat"
+        app:showAsAction="always"/>
+
+
+
+</menu>

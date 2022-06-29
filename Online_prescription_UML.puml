@@ -1,0 +1,706 @@
+@startuml
+class com.example.notmyapplication.MyService {
++ {static} int ACTION_MANAGE_OVERLAY_PERMISSION_REQUEST_CODE
+~ Dialog dialog
+- {static} int REQUEST_CODE
+~ Context con
++ IBinder onBind(Intent)
++ int onStartCommand(Intent,int,int)
++ void onDestroy()
++ void checkPermission()
+}
+class com.example.notmyapplication.Doc_User_List {
+- {static} int PICK_FROM_GALLERY
+~ ArrayList<user> rewardArrayList1
+~ RecyclerView list_rewards1
+~ DatabaseReference databaseReference
+~ user r
+~ FirebaseDatabase firebaseDatabase
+# void onCreate(Bundle)
+}
+class com.example.notmyapplication.databinding.ListPopupLayoutBinding {
+- RelativeLayout rootView
++ Button add
++ EditText amount1
++ TextView exDate
++ Button exit
++ TextView name
++ TextView price1
++ RelativeLayout getRoot()
++ {static} ListPopupLayoutBinding inflate(LayoutInflater)
++ {static} ListPopupLayoutBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ListPopupLayoutBinding bind(View)
+}
+class com.example.notmyapplication.doc_login {
+~ EditText name
+~ Button b3
+~ String docPassword
+~ String docMail
+~ String docName
+~ SharedPreferences sp
+~ CheckBox rem
+# void onCreate(Bundle)
++ void logIn()
++ void onClick(View)
+}
+class com.example.notmyapplication.databinding.ActivityMa3RegDocBinding {
+- ConstraintLayout rootView
++ EditText SPEmail
++ EditText SPName
++ EditText SPPassword
++ Button SignApp
++ EditText editTextPhone2
++ TextView textView2
++ ConstraintLayout getRoot()
++ {static} ActivityMa3RegDocBinding inflate(LayoutInflater)
++ {static} ActivityMa3RegDocBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityMa3RegDocBinding bind(View)
+}
+class com.example.notmyapplication.databinding.ActivitySplash2Binding {
+- ConstraintLayout rootView
++ ImageView imageView
++ ConstraintLayout getRoot()
++ {static} ActivitySplash2Binding inflate(LayoutInflater)
++ {static} ActivitySplash2Binding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivitySplash2Binding bind(View)
+}
+class com.example.notmyapplication.prescription_userSide {
+~ Button b
+~ RecyclerView recyclerView
+~ user u
+~ ArrayList<Meds> medsList
+~ BottomNavigationView bottomNav
+~ DatabaseReference databaseReference
+~ FirebaseAuth firebaseAuth
+~ FirebaseDatabase firebaseDatabase
+~ SharedPreferences spU
+# void onCreate(Bundle)
++ void onItemClick(int)
+}
+class com.example.notmyapplication.databinding.AlertDialogBinding {
+- LinearLayout rootView
++ LinearLayout getRoot()
++ {static} AlertDialogBinding inflate(LayoutInflater)
++ {static} AlertDialogBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} AlertDialogBinding bind(View)
+}
+class com.example.notmyapplication.ExampleUnitTest {
++ void addition_isCorrect()
+}
+class com.example.notmyapplication.user {
+- String name
+- String pass
+- String email
+- String key
+- ArrayList<Meds> medlist
+- String pic
+- String Phone
++ String getUserName()
++ String getPassWord()
++ String getEmail()
++ String getKey()
++ ArrayList<Meds> getMedlist()
++ String getPhone()
++ void setUserName(String)
++ void setPassWord(String)
++ void setEmail(String)
++ void setKey(String)
++ void setMedlist(ArrayList<Meds>)
++ void addToMedlist(Meds)
++ String getPic()
++ void setPic(String)
++ void setPhone(String)
++ String toString()
+}
+class com.example.notmyapplication.databinding.FragmentFirstBinding {
+- ConstraintLayout rootView
++ Button buttonFirst
++ TextView textviewFirst
++ ConstraintLayout getRoot()
++ {static} FragmentFirstBinding inflate(LayoutInflater)
++ {static} FragmentFirstBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentFirstBinding bind(View)
+}
+class com.example.notmyapplication.med_select_for_doc {
+~ String userKey
+~ RecyclerView recyclerView
+~ Meds m
+~ ArrayList<Meds> medsList
+~ AlertDialog.Builder builder
+~ DatabaseReference databaseReference
+~ double minteger
+~ FirebaseDatabase firebaseDatabase
+~ boolean updated
+~ TextView name
+~ TextView price1
+~ EditText amount1
+~ TextView exDate
+~ Button add
+~ Button exit
+~ AlertDialog dialog
+- {static} String TAG
+~ DatePickerDialog.OnDateSetListener mDateSetListener_ex
+# void onCreate(Bundle)
++ void createNewContactDialog(int)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
++ void onItemClick(int)
++ void onClick(View)
++ void addmed(Meds,int)
+}
+class com.example.notmyapplication.MainActivity {
+~ SharedPreferences spU
+~ FirebaseAuth firebaseAuth
+~ Intent in
+~ BottomNavigationView bottomNav
+~ BottomNavigationView bottomNavUser
+# void onCreate(Bundle)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
+}
+class com.example.notmyapplication.BuildConfig {
++ {static} boolean DEBUG
++ {static} String APPLICATION_ID
++ {static} String BUILD_TYPE
++ {static} int VERSION_CODE
++ {static} String VERSION_NAME
+}
+class com.example.notmyapplication.user_login {
+~ EditText name
+~ Button b3
+~ String password
+~ String mail
+~ String Name
+~ SharedPreferences sp
+~ CheckBox rem
+# void onCreate(Bundle)
++ void logIn()
++ void onClick(View)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
+}
+class com.example.notmyapplication.databinding.ActivityMedsRegBinding {
+- ConstraintLayout rootView
++ CircleImageView UPic
++ Button button3
++ EditText editTextTextPrice
++ EditText loginName
++ ConstraintLayout getRoot()
++ {static} ActivityMedsRegBinding inflate(LayoutInflater)
++ {static} ActivityMedsRegBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityMedsRegBinding bind(View)
+}
+class com.example.notmyapplication.databinding.MedcellBinding {
+- ConstraintLayout rootView
++ ImageView imageView3
++ TextView name
++ TextView price
++ ConstraintLayout getRoot()
++ {static} MedcellBinding inflate(LayoutInflater)
++ {static} MedcellBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} MedcellBinding bind(View)
+}
+class com.example.notmyapplication.SplashS {
+~ BroadCastBattery broadCastBattery
+# void onCreate(Bundle)
+# void onStop()
+}
+class com.example.notmyapplication.SplashS.BroadCastBattery {
++ void onReceive(Context,Intent)
+}
+class com.example.notmyapplication.databinding.UsercellBinding {
+- ConstraintLayout rootView
++ TextView email
++ CircleImageView imageView2
++ TextView name
++ TextView phone
++ ConstraintLayout getRoot()
++ {static} UsercellBinding inflate(LayoutInflater)
++ {static} UsercellBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} UsercellBinding bind(View)
+}
+class com.example.notmyapplication.databinding.ActivityPrescriptionUserSideBinding {
+- ConstraintLayout rootView
++ RecyclerView MedsUserSide
++ UserToolbarBinding include
++ TextView textView2
++ ConstraintLayout getRoot()
++ {static} ActivityPrescriptionUserSideBinding inflate(LayoutInflater)
++ {static} ActivityPrescriptionUserSideBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityPrescriptionUserSideBinding bind(View)
+}
+class com.example.notmyapplication.databinding.FullmedcellBinding {
+- ConstraintLayout rootView
++ TextView amount1
++ TextView date10
++ ImageView imageView4
++ TextView name
++ TextView price
++ ConstraintLayout getRoot()
++ {static} FullmedcellBinding inflate(LayoutInflater)
++ {static} FullmedcellBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FullmedcellBinding bind(View)
+}
+class com.example.notmyapplication.doc_reg {
+~ EditText docName
+~ EditText docPass
+~ EditText docEmail
+~ EditText docPhone
+~ String num
+~ FirebaseAuth firebaseAuth
+~ FirebaseDatabase firebaseDatabase
+~ Button b
+~ ProgressDialog p
+~ DatabaseReference myref
+# void onCreate(Bundle)
++ void createDoctor()
++ boolean isValidate()
++ void onClick(View)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
+}
+class com.example.notmyapplication.databinding.FragmentSecondBinding {
+- ConstraintLayout rootView
++ Button buttonSecond
++ TextView textviewSecond
++ ConstraintLayout getRoot()
++ {static} FragmentSecondBinding inflate(LayoutInflater)
++ {static} FragmentSecondBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentSecondBinding bind(View)
+}
+class com.example.notmyapplication.Message {
+- String text
+- String FromUser
++ String getText()
++ void setText(String)
++ String getFromUser()
++ void setFromUser(String)
++ String toString()
+}
+class com.example.notmyapplication.MedsReg {
+- {static} String TAG
+~ EditText name
+~ Button b3
+~ ImageView pic
+~ String picName
+~ Uri uri
+~ StorageReference mStorageRef
+~ FirebaseAuth firebaseAuth
+~ FirebaseDatabase firebaseDatabase
+~ ProgressDialog p
+~ DatabaseReference myref
+~ ActivityResultLauncher<Intent> someActivityResultLauncher
+# void onCreate(Bundle)
++ void CreateMed()
+- void handlePermission()
+- String getFileExtension(Uri)
++ void onActivityResult(int,int,Intent)
++ void onClick(View)
+}
+class com.example.notmyapplication.UserRegister {
++ {static} int PICK_FROM_GALLERY
+~ EditText name
+~ EditText pass
+~ EditText email
+~ EditText phone
+~ String num
+~ ImageView pic
+~ String picName
+~ Uri uri
+~ int FROM_GALLERY
+~ int FROM_CAMERA
+~ int flag
+~ byte[] bytes
+~ boolean f1
+- {static} int MY_CAMERA_PERMISSION_CODE
+~ AlertDialog.Builder adb
+~ AlertDialog ad
+~ FirebaseAuth firebaseAuth
+~ FirebaseDatabase firebaseDatabase
+~ StorageReference mStorageRef
+~ Button b
+~ ProgressDialog p
+~ DatabaseReference myref
+~ ActivityResultLauncher activityResultLauncher
+# void onCreate(Bundle)
++ void CreateUser()
++ boolean isValidate()
++ void onClick(View)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
+- void handlePermission()
+- String getFileExtension(Uri)
++ void onActivityResult(int,int,Intent)
+}
+class com.example.notmyapplication.Doc {
+- String docName
+- String docPass
+- String docEmail
+- String docKey
+- String docPhone
+- ArrayList<String> userList
++ void AddUserKeyToDoc(String)
++ String getDocName()
++ String getDocPassWord()
++ String getDocEmail()
++ String getDocKey()
++ ArrayList getUserList()
++ String getDocPhone()
++ void setDocName(String)
++ void setDocPassWord(String)
++ void setDocEmail(String)
++ void setDocKey(String)
++ void setUserList(ArrayList<String>)
++ void setDocPhone(String)
++ String toString()
+}
+class com.example.notmyapplication.med_adapter {
+- interface_for_adapter interface_for_adapter
+~ Context context
+~ ArrayList<Meds> ItemsList
+~ StorageReference storageReference
++ med_adapter.MyViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(med_adapter.MyViewHolder,int)
++ int getItemCount()
+}
+class com.example.notmyapplication.med_adapter.MyViewHolder {
+~ TextView medName
+~ ImageView pic
+}
+class com.example.notmyapplication.chat {
+~ ImageView sendMessege
+~ EditText text
+~ ArrayAdapter<String> adapter
+~ ArrayList<String> list
+~ ArrayList<Message> listpost
+~ ArrayAdapter<Message> lpadapter
+~ ListView myListView
+~ DatabaseReference myref
+~ SharedPreferences spU
+~ ProgressDialog p
+~ BottomNavigationView bottomNavUser
+~ Message message
+~ FirebaseDatabase firebaseDatabase
+~ FirebaseAuth firebaseAuth
+# void onCreate(Bundle)
++ void createMSG()
++ boolean isValidate()
+}
+class com.example.notmyapplication.databinding.ActivityPusAdapterBinding {
+- ConstraintLayout rootView
++ ConstraintLayout getRoot()
++ {static} ActivityPusAdapterBinding inflate(LayoutInflater)
++ {static} ActivityPusAdapterBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityPusAdapterBinding bind(View)
+}
+class com.example.notmyapplication.Full_med_adapter {
+- interface_for_adapter interface_for_adapter
+~ Context context
+~ ArrayList<Meds> ItemsList
+~ StorageReference storageReference
++ Full_med_adapter.MyViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(Full_med_adapter.MyViewHolder,int)
++ int getItemCount()
+}
+class com.example.notmyapplication.Full_med_adapter.MyViewHolder {
+~ TextView medName
+~ ImageView pic
+}
+class com.example.notmyapplication.ExampleInstrumentedTest {
++ void useAppContext()
+}
+interface com.example.notmyapplication.interface_for_adapter {
+~ void onItemClick(int)
+}
+class com.example.notmyapplication.Meds {
+- String medName
+- Integer amount
+- Double price
+- String expDate
+- String picName
++ String getMedName()
++ void setMedName(String)
++ Integer getAmount()
++ void setAmount(Integer)
++ Double getPrice()
++ String getPicName()
++ void setPrice(Double)
++ String getExpDate()
++ void setExpDate(String)
++ void setPicName(String)
++ String toString()
+}
+class com.example.notmyapplication.ConnectDocToUser {
+~ boolean updated
+~ RecyclerView recyclerView
+~ user u
+~ ArrayList<user> UsersList
+~ SharedPreferences spU
+~ DatabaseReference databaseReference
+~ BottomNavigationView bottomNav
+~ FirebaseDatabase firebaseDatabase
+~ FirebaseAuth firebaseAuth
+# void onCreate(Bundle)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
++ void onItemClick(int)
+}
+class com.example.notmyapplication.databinding.ActivityMain2Binding {
+- ConstraintLayout rootView
++ CheckBox RememberMe
++ Button button3
++ EditText editTextTextEmailAddress
++ EditText editTextTextPassword
++ ConstraintLayout logIn
++ EditText loginName
++ TextView textView2
++ ConstraintLayout getRoot()
++ {static} ActivityMain2Binding inflate(LayoutInflater)
++ {static} ActivityMain2Binding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityMain2Binding bind(View)
+}
+class com.example.notmyapplication.databinding.ActivityMedSelectForDocBinding {
+- ConstraintLayout rootView
++ RecyclerView medSelectForDoc
++ ConstraintLayout getRoot()
++ {static} ActivityMedSelectForDocBinding inflate(LayoutInflater)
++ {static} ActivityMedSelectForDocBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityMedSelectForDocBinding bind(View)
+}
+class com.example.notmyapplication.databinding.ActivityMa3RegBinding {
+- ConstraintLayout rootView
++ EditText SPEmail
++ EditText SPName
++ EditText SPPassword
++ Button SignApp
++ ConstraintLayout SignUp
++ EditText editTextPhone
++ TextView textView2
++ CircleImageView userPIC
++ ConstraintLayout getRoot()
++ {static} ActivityMa3RegBinding inflate(LayoutInflater)
++ {static} ActivityMa3RegBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityMa3RegBinding bind(View)
+}
+class com.example.notmyapplication.databinding.UserToolbarBinding {
+- RelativeLayout rootView
++ BottomNavigationView userBottomNavigation
++ RelativeLayout getRoot()
++ {static} UserToolbarBinding inflate(LayoutInflater)
++ {static} UserToolbarBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} UserToolbarBinding bind(View)
+}
+class com.example.notmyapplication.databinding.ActivityDocLoginBinding {
+- ConstraintLayout rootView
++ CheckBox RememberMe
++ Button button3
++ EditText editTextTextEmailAddress
++ EditText editTextTextPassword
++ EditText loginName
++ TextView textView2
++ ConstraintLayout getRoot()
++ {static} ActivityDocLoginBinding inflate(LayoutInflater)
++ {static} ActivityDocLoginBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityDocLoginBinding bind(View)
+}
+class com.example.notmyapplication.UserPrescriptioDocView {
+~ String userKey
+~ Button b
+~ RecyclerView recyclerView
+~ user u
+~ ArrayList<Meds> medsList
+~ DatabaseReference databaseReference
+~ FirebaseDatabase firebaseDatabase
+# void onCreate(Bundle)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
++ void onItemClick(int)
++ void onClick(View)
+}
+class com.example.notmyapplication.databinding.ActivityConnectDocToUserBinding {
+- ConstraintLayout rootView
++ RecyclerView UserList
++ ToolBarsBinding include
++ TextView textView2
++ ConstraintLayout getRoot()
++ {static} ActivityConnectDocToUserBinding inflate(LayoutInflater)
++ {static} ActivityConnectDocToUserBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityConnectDocToUserBinding bind(View)
+}
+class com.example.notmyapplication.databinding.ActivityMainBinding {
+- ConstraintLayout rootView
++ ImageView imageView5
++ ToolBarsBinding include2
++ TextView textView
++ ConstraintLayout getRoot()
++ {static} ActivityMainBinding inflate(LayoutInflater)
++ {static} ActivityMainBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityMainBinding bind(View)
+}
+class com.example.notmyapplication.ConnectionHelper {
++ {static} long lastNoConnectionTs
++ {static} boolean isOnline
++ {static} boolean isConnected(Context)
++ {static} boolean isConnectedOrConnecting(Context)
+}
+class com.example.notmyapplication.databinding.ToolBarsBinding {
+- RelativeLayout rootView
++ BottomNavigationView bottomNavigation
++ RelativeLayout getRoot()
++ {static} ToolBarsBinding inflate(LayoutInflater)
++ {static} ToolBarsBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ToolBarsBinding bind(View)
+}
+class com.example.notmyapplication.databinding.ActivityDocUserListBinding {
+- ConstraintLayout rootView
++ TextView textView3
++ ConstraintLayout getRoot()
++ {static} ActivityDocUserListBinding inflate(LayoutInflater)
++ {static} ActivityDocUserListBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityDocUserListBinding bind(View)
+}
+class com.example.notmyapplication.databinding.ActivityMessageBinding {
+- ConstraintLayout rootView
++ ConstraintLayout getRoot()
++ {static} ActivityMessageBinding inflate(LayoutInflater)
++ {static} ActivityMessageBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityMessageBinding bind(View)
+}
+class com.example.notmyapplication.Splash {
+~ BroadCastBattery broadCastBattery
+# void onCreate(Bundle)
+# void onStop()
+}
+class com.example.notmyapplication.Splash.BroadCastBattery {
++ void onReceive(Context,Intent)
+}
+class com.example.notmyapplication.databinding.ActivityUsersOfDocBinding {
+- ConstraintLayout rootView
++ RecyclerView UserList2
++ ToolBarsBinding include
++ TextView textView2
++ ConstraintLayout getRoot()
++ {static} ActivityUsersOfDocBinding inflate(LayoutInflater)
++ {static} ActivityUsersOfDocBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityUsersOfDocBinding bind(View)
+}
+class com.example.notmyapplication.users_of_doc {
+~ boolean updated
+~ RecyclerView recyclerView
+~ user u
+~ ArrayList<user> UsersList
+~ SharedPreferences spU
+~ DatabaseReference databaseReference
+~ FirebaseAuth firebaseAuth
+~ FirebaseDatabase firebaseDatabase
+~ BottomNavigationView bottomNav
+# void onCreate(Bundle)
++ boolean onOptionsItemSelected(MenuItem)
++ void onItemClick(int)
+}
+class com.example.notmyapplication.databinding.ActivityChatBinding {
+- ConstraintLayout rootView
++ UserToolbarBinding include
++ LinearLayout linearLayout
++ ListView list
++ ImageView sendImage
++ EditText userMessage
++ ConstraintLayout getRoot()
++ {static} ActivityChatBinding inflate(LayoutInflater)
++ {static} ActivityChatBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityChatBinding bind(View)
+}
+class com.example.notmyapplication.databinding.ActivityUserPrescriptioDocViewBinding {
+- ConstraintLayout rootView
++ RecyclerView MedsDocSide
++ Button addsMedToUser
++ TextView textView2
++ ConstraintLayout getRoot()
++ {static} ActivityUserPrescriptioDocViewBinding inflate(LayoutInflater)
++ {static} ActivityUserPrescriptioDocViewBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityUserPrescriptioDocViewBinding bind(View)
+}
+class com.example.notmyapplication.DUL_adapter {
+- interface_for_adapter interface_for_adapter
+~ Context context
+~ ArrayList<user> ItemsList
+~ StorageReference storageReference
++ DUL_adapter.MyViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(DUL_adapter.MyViewHolder,int)
++ int getItemCount()
+}
+class com.example.notmyapplication.DUL_adapter.MyViewHolder {
+~ TextView name
+~ ImageView pic
+}
+
+
+android.app.Service <|-- com.example.notmyapplication.MyService
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.Doc_User_List
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ListPopupLayoutBinding
+com.example.notmyapplication.OnClickListener <|.. com.example.notmyapplication.doc_login
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.doc_login
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityMa3RegDocBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivitySplash2Binding
+com.example.notmyapplication.interface_for_adapter <|.. com.example.notmyapplication.prescription_userSide
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.prescription_userSide
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.AlertDialogBinding
+java.io.Serializable <|.. com.example.notmyapplication.user
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.FragmentFirstBinding
+com.example.notmyapplication.OnClickListener <|.. com.example.notmyapplication.med_select_for_doc
+com.example.notmyapplication.interface_for_adapter <|.. com.example.notmyapplication.med_select_for_doc
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.med_select_for_doc
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.MainActivity
+com.example.notmyapplication.OnClickListener <|.. com.example.notmyapplication.user_login
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.user_login
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityMedsRegBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.MedcellBinding
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.SplashS
+com.example.notmyapplication.SplashS +.. com.example.notmyapplication.SplashS.BroadCastBattery
+com.example.notmyapplication.BroadcastReceiver <|-- com.example.notmyapplication.SplashS.BroadCastBattery
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.UsercellBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityPrescriptionUserSideBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.FullmedcellBinding
+com.example.notmyapplication.OnClickListener <|.. com.example.notmyapplication.doc_reg
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.doc_reg
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.FragmentSecondBinding
+com.example.notmyapplication.OnClickListener <|.. com.example.notmyapplication.MedsReg
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.MedsReg
+com.example.notmyapplication.OnClickListener <|.. com.example.notmyapplication.UserRegister
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.UserRegister
+java.io.Serializable <|.. com.example.notmyapplication.Doc
+com.example.notmyapplication.Adapter <|-- com.example.notmyapplication.med_adapter
+com.example.notmyapplication.med_adapter +.. com.example.notmyapplication.med_adapter.MyViewHolder
+com.example.notmyapplication.ViewHolder <|-- com.example.notmyapplication.med_adapter.MyViewHolder
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.chat
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityPusAdapterBinding
+com.example.notmyapplication.Adapter <|-- com.example.notmyapplication.Full_med_adapter
+com.example.notmyapplication.Full_med_adapter +.. com.example.notmyapplication.Full_med_adapter.MyViewHolder
+com.example.notmyapplication.ViewHolder <|-- com.example.notmyapplication.Full_med_adapter.MyViewHolder
+com.example.notmyapplication.interface_for_adapter <|.. com.example.notmyapplication.ConnectDocToUser
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.ConnectDocToUser
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityMain2Binding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityMedSelectForDocBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityMa3RegBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.UserToolbarBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityDocLoginBinding
+com.example.notmyapplication.interface_for_adapter <|.. com.example.notmyapplication.UserPrescriptioDocView
+com.example.notmyapplication.OnClickListener <|.. com.example.notmyapplication.UserPrescriptioDocView
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.UserPrescriptioDocView
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityConnectDocToUserBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityMainBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ToolBarsBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityDocUserListBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityMessageBinding
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.Splash
+com.example.notmyapplication.Splash +.. com.example.notmyapplication.Splash.BroadCastBattery
+com.example.notmyapplication.BroadcastReceiver <|-- com.example.notmyapplication.Splash.BroadCastBattery
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityUsersOfDocBinding
+com.example.notmyapplication.interface_for_adapter <|.. com.example.notmyapplication.users_of_doc
+androidx.appcompat.app.AppCompatActivity <|-- com.example.notmyapplication.users_of_doc
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityChatBinding
+androidx.viewbinding.ViewBinding <|.. com.example.notmyapplication.databinding.ActivityUserPrescriptioDocViewBinding
+com.example.notmyapplication.Adapter <|-- com.example.notmyapplication.DUL_adapter
+com.example.notmyapplication.DUL_adapter +.. com.example.notmyapplication.DUL_adapter.MyViewHolder
+com.example.notmyapplication.ViewHolder <|-- com.example.notmyapplication.DUL_adapter.MyViewHolder
+@enduml
